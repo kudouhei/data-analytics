@@ -61,6 +61,6 @@ pd.to_datetime(s)
 # 3   2002-12-17 18:17:00
 # 4   2005-10-31 23:51:00
 # dtype: datetime64[ns]
+```
 
-
-
+![](./images/date_time.png)

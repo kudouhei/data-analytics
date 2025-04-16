@@ -3,3 +3,5 @@ src/pandas/data/so_2021_survey_results.csv
 src/pandas/data/nyc_taxi_2019-01.csv
 
 src/pandas/data/*
+
+.DS_Store
