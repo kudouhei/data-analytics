@@ -197,3 +197,35 @@ time_interval
 Combining data from different sources is one of the most compelling use cases for a data warehouse.
 
 Dates and timestamps that are in different formats can be standardized with SQL. JOINing on dates or including date fields in UNIONs generally requires that the dates or timestamps be in the same format.
+
+### PostgresSQL
+
+**macOS (homebrew)**
+
+```bash
+# 安装 PostgreSQL
+brew install postgresql
+
+# 启动服务
+brew services start postgresql
+
+# 创建数据库（首次使用）
+createdb $(whoami)
+
+# 进入交互终端
+psql
+```
+
+```bash
+# 1. 先连接到默认数据库
+psql -U postgres
+
+# 2. 在 PostgreSQL 终端中创建新数据库
+CREATE DATABASE "yu.pei";
+
+# 3. 退出
+\q
+
+# 4. 重新连接
+psql -U yu.pei  # 或指定数据库：psql -d yu.pei -U your_username
+```
