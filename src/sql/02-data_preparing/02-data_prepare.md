@@ -377,5 +377,22 @@ Both can be used to append or stack data together in this fashion, but they are 
 `UNION ALL` is faster, since the database doesn’t have to do a pass over the data to find duplicates. It also ensures that every record ends up in the result set. I tend to use `UNION ALL`, using `UNION` only when I have a reason to suspect duplicate data.
 
 
+## Statistical Significance Testing
+Statistical significance testing is the method of determining whether the data that you have supports a certain hypothesis.
+
+To build such a method, there are several major parts you need to define:
+- First, you have the test statistic you are examining. It may be a proportion, an average, the difference between two groups, or a distribution. 
+- The next necessary part is a null hypothesis, which is the idea that the results observed are the product of chance.
+- Then need an alternative hypothesis, which is the idea that the results seen cannot be explained by chance alone.
+- Finally, a test requires a significance level, which is the value the test statistic needs to take before it is decided that the null hypothesis cannot explain the difference.
+
+![Statistical Significance Testing](./images/03.png)
+
+### Common Statistical Significance Tests
+
+- **Two-sample Z-test**: This test is for determining whether the average of the two samples is different. This test assumes that both samples are drawn from a normal distribution with a known population standard deviation.
+- **Two-sample T-test**: A test for determining whether the average of two samples is different when either the sample set is too small (that is, less than 30 data points per sample) or the population standard deviation is unknown.
+- **Pearson's Chi-squared test**: A test for determining whether the distribution of data points to categories is different than what would be expected due to chance. This is the primary test for determining whether the proportions in tests, such as those in an A/B test, are beyond what would be expected from chance.
+
 
 
