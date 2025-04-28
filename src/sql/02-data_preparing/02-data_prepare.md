@@ -274,6 +274,15 @@ nvl(num_orders,0)
 
 ```
 
+The `LEAST/GREATEST` Functions
+
+The `LEAST` function returns the smallest value from a list of arguments. The `GREATEST` function returns the largest value from a list of arguments.
+
+```sql
+LEAST(num_orders, 0)
+GREATEST(num_orders, 0)
+```
+
 ### Missing Data
 
 For example, we might expect that each customer in the transactions table also has a record in the customer table. To check this, query the tables using a `LEFT JOIN` and add a `WHERE` condition to find the customers that do not exist in the second table:
