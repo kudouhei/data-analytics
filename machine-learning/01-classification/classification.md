@@ -6,9 +6,9 @@ We define the loss function, L, to learn the model parameters as the mean square
 
 $$L(w, b) = \frac{1}{N} \sum_{i=1}^{N} (y_i - (wx_i + b))^2$$
 
-where `$y_i$` is the true class label and `$wx_i + b$` is the calculated outcome.
+where $y_i$ is the true class label and $wx_i + b$ is the calculated outcome.
 
-The term `$\frac{1}{2}$` is just added for our convenience and will make it easier to derive the gradient of the loss function with respect to the weight parameters.
+The term $\frac{1}{2}$ is just added for our convenience and will make it easier to derive the gradient of the loss function with respect to the weight parameters.
 
 ![image.png](./images/01-gradient.png)
 
@@ -31,3 +31,14 @@ The ADAptive LInear NEuron (ADALINE) is a single-layer perceptron that uses the 
 
 ![image.png](./images/02-Adaline.png)
 
+
+### Choosing the learning rate
+As we can see in the resulting loss function plots, we encountered two different types of problems.
+
+The left chart shows what could happen if we choose a learning rate that is too large. Instead of minimizing the loss function, the MSE becomes larger in every epoch, because we overshoot the global minimum.
+
+On the other hand, we can see that the loss decreases on the right plot, but the chosen learning rate, 𝜂=0.0001 , is so small that the algorithm would require a very large number of epochs to converge to the global loss minimum
+
+![image.png](./images/03-loss_epochs.png)
+
+Therefore, it is important to choose a learning rate that is not too large or too small.
