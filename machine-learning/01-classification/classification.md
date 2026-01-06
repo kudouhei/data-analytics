@@ -42,3 +42,18 @@ On the other hand, we can see that the loss decreases on the right plot, but the
 ![image.png](./images/03-loss_epochs.png)
 
 Therefore, it is important to choose a learning rate that is not too large or too small.
+
+### Improving gradient descent through feature scaling
+
+Gradient descent is one of the many algorithms that benefit from feature scaling. We will use a feature scaling method called standardization. This normalization procedure helps gradient descent learning to converge more quickly; however, it does not make the original dataset normally distributed.
+
+$$x' = \frac{x - \mu}{\sigma}$$
+
+where $\mu$ is the mean of the feature and $\sigma$ is the standard deviation of the feature.
+
+One of the reasons why standardization helps with gradient descent learning is that it is easier to find a learning rate that works well for all weights (and the bias).
+
+The Figure illustrates possible gradient updates with unscaled features (left) and standardized features (right), where the concentric circles represent the loss surface as a function of two model weights in a two-dimensional classification problem:
+
+![image.png](./images/02_13.png)
+
